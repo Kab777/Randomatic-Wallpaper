@@ -14,6 +14,9 @@ import rx.Observable;
 public interface ImageService {
     @GET("random")
     Observable<RandomImage> getImg(
-            @Query("client_id") String clientId
+            @Query("client_id") String clientId,
+            @Query("w") String imgWidth,
+            @Query("h") String imgHeight,
+            @Query("orientation") String orientation
     );
 }

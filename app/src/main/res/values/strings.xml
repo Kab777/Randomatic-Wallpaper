@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">JyWallPaper</string>
+    <string name="app_name">JY</string>
+
+    <string name="context_menu">Context menu</string>
+
+    <string name="GothamBold">fonts/Gotham-Bold.otf</string>
+    <string name="GothamMedium">fonts/Gotham-Medium.otf</string>
 </resources>
