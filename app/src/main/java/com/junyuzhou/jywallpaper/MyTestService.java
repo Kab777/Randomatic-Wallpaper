@@ -4,6 +4,7 @@ import android.app.IntentService;
 import android.app.WallpaperManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.os.Environment;
 import android.util.Log;
@@ -27,6 +28,8 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import timber.log.Timber;
+
+import static com.junyuzhou.jywallpaper.WpUserPreference.getScreenSize;
 
 /**
  * Created by Junyu on 2017-02-02.
@@ -78,8 +81,9 @@ public class MyTestService extends IntentService {
 
         ImageService service = retrofit.create(ImageService.class);
 
+        Point point = WpUserPreference.getScreenSize(this);
         Observable<RandomImage> call = service.getImg(WeperConstants.API_APPLICATION_ID,
-                Integer.toString(1920), Integer.toString(1080), "portrait");
+                Integer.toString(point.y), Integer.toString(point.x), "portrait");
         call
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -105,31 +109,12 @@ public class MyTestService extends IntentService {
                                     @Override
                                     public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
 
-
-                                        Timber.v("1");
                                         try {
                                             wallpaperManager.setBitmap(resource);
-                                            Timber.v("2");
+
                                         } catch (IOException e) {
                                             e.printStackTrace();
-                                            Timber.v("3");
-                                        }
 
-                                        String root = Environment.getExternalStorageDirectory().getAbsolutePath();
-                                        File myDir = new File(root + "/Pictures");
-                                        myDir.mkdirs();
-
-                                        String fname = "Image_1.jpg";
-                                        File file = new File (myDir, fname);
-                                        if (file.exists ()) file.delete ();
-                                        try {
-                                            FileOutputStream out = new FileOutputStream(file);
-                                            resource.compress(Bitmap.CompressFormat.JPEG, 100, out);
-                                            out.flush();
-                                            out.close();
-
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
                                         }
                                     }
                                 });

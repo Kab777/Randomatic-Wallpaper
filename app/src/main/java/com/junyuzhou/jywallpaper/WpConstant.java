@@ -7,4 +7,6 @@ package com.junyuzhou.jywallpaper;
 public class WpConstant {
     public static final String SCHEDULED = "scheduled";
     public static final String PREFERENCE_NAME = "userInfo";
+    public static final String SCREEN_HEIGHT = "screenHeight";
+    public static final String SCREEN_WIDTH = "screenWidth";
 }

@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
         int screen_width = size.x;
         int screen_height = size.y;
 
-
+        WpUserPreference.storeScreenSize(this, screen_width, screen_height);
         Timber.v("Height " + Integer.toString(screen_height));
         Timber.v("Width " + Integer.toString(screen_width));
         fragmentManager = getSupportFragmentManager();
@@ -201,7 +201,6 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 
     @Override

@@ -3,7 +3,10 @@ package com.junyuzhou.jywallpaper;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Point;
 import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
+import android.view.Display;
 
 
 import com.junyuzhou.jywallpaper.module.DaggerNetComponent;
@@ -29,7 +32,9 @@ public class WeperApplication extends Application {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         if (!sharedPreferences.getBoolean("firstTime", false)) {
             SharedPreferences mRef = getSharedPreferences(PREFERENCE_NAME, MODE_PRIVATE);
-            mRef.edit().putBoolean(SCHEDULED, false).commit();
+            SharedPreferences.Editor editor = mRef.edit();
+            editor.putBoolean(SCHEDULED, false);
+            editor.commit();
         }
 
         netComponent = DaggerNetComponent.builder()

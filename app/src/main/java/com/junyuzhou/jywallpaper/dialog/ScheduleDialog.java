@@ -114,7 +114,7 @@ public class ScheduleDialog {
         // First parameter is the type: ELAPSED_REALTIME, ELAPSED_REALTIME_WAKEUP, RTC_WAKEUP
         // Interval can be INTERVAL_FIFTEEN_MINUTES, INTERVAL_HALF_HOUR, INTERVAL_HOUR, INTERVAL_DAY
         //hours * AlarmManager.INTERVAL_HOUR
-        alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, 1000, pIntent);
+        alarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, firstMillis, AlarmManager.INTERVAL_HALF_HOUR, pIntent);
     }
 
     private void cancelAlarm() {
