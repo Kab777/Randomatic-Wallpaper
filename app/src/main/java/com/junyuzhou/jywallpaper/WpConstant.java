@@ -9,4 +9,7 @@ public class WpConstant {
     public static final String PREFERENCE_NAME = "userInfo";
     public static final String SCREEN_HEIGHT = "screenHeight";
     public static final String SCREEN_WIDTH = "screenWidth";
+    public static final String PHOTO_AUTHOR = "photoAuthor";
+    public static final String PHOTO_NAME = "photoName";
+    public static final String AUTHOR_URL = "authorUrl";
 }

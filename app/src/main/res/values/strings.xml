@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">JY</string>
+    <string name="app_name">Randomatic Wallpaper</string>
 
     <string name="context_menu">Context menu</string>
 
     <string name="GothamBold">fonts/Gotham-Bold.otf</string>
     <string name="GothamMedium">fonts/Gotham-Medium.otf</string>
+
+    <string name="photoInfo">&lt;a href="%1$s ">%2$s&lt;/a>\u0020/\u0020
+         &lt;a href="https://unsplash.com/">UnSplash&lt;/a>
+    </string>
 </resources>

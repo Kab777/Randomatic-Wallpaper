@@ -52,11 +52,6 @@ public class MyTestService extends IntentService {
 
     }
 
-//    @Override
-//    public int onStartCommand(Intent intent, int flags, int startId) {
-//        return START_STICKY;
-//    }
-
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -101,7 +96,7 @@ public class MyTestService extends IntentService {
                     @Override
                     public void onNext(RandomImage randomImage) {
                         Timber.v(randomImage.getUrls().getRegular());
-
+                        WpUserPreference.storeCurImageInfo(MyTestService.this, randomImage.getUser().getName(), randomImage.getUser().getPortfolioUrl());
                         Glide.with(MyTestService.this)
                                 .load(randomImage.getUrls().getRegular())
                                 .asBitmap()

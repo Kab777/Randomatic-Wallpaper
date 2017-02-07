@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
             //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
-        mToolBarTextView.setText("Jy");
+        mToolBarTextView.setText(getResources().getString(R.string.app_name));
     }
 
     protected void addFragment(Fragment fragment, boolean addToBackStack, int containerId) {
@@ -202,6 +202,10 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 
     @Override
     public void onMenuItemClick(View clickedView, int position) {
