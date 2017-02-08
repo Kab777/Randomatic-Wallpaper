@@ -12,9 +12,9 @@ An automatic wallpaper changing app that changes your mobile app's background/lo
 
 
 Key Words:
-• Automatic
-• Scheduled
-• Random high resolution pictures
+* Automatic
+* Scheduled
+* Random high resolution pictures
 
 
 ![](demoPhotos/git_1.jpg?raw=true "Schedule Dialog")
