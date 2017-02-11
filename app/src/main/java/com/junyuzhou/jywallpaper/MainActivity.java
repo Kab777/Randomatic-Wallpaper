@@ -15,6 +15,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -93,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements OnMenuItemClickLi
 //            }
 //        });
         typeface = Typeface.createFromAsset(getAssets(), getString(R.string.GothamMedium));
+
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getRealSize(size);

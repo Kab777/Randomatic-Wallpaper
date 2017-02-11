@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0000000"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:elevation="20dp"
+        android:orientation="vertical">
+
+        <com.junyuzhou.jywallpaper.widget.WpTextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/PermissionTitle"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            app:font="@string/GothamMedium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary" />
+
+        <com.junyuzhou.jywallpaper.widget.WpTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/PermissionMsg"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            app:font="@string/GothamMedium" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.junyuzhou.jywallpaper.widget.WpTextView
+                android:id="@+id/cancelGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/colorAccent"
+                android:textSize="19sp"
+                app:font="@string/GothamMedium" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <com.junyuzhou.jywallpaper.widget.WpTextView
+                android:id="@+id/goToSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Settings"
+                android:textColor="@color/colorAccent"
+                android:textSize="19sp"
+                app:font="@string/GothamMedium" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

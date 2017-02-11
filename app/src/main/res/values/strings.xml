@@ -9,4 +9,9 @@
     <string name="photoInfo">&lt;a href="%1$s ">%2$s&lt;/a>\u0020/\u0020
          &lt;a href="https://unsplash.com/">UnSplash&lt;/a>
     </string>
+
+    <!-- Permission Msg -->
+    <string name="PermissionTitle">Missing required permissions</string>
+    <string name="PermissionMsg">1. Go to <b>Settings</b>\n2. <b>Permissions</b>\n3. Turn on <b>Storage</b> permission
+    </string>
 </resources>
